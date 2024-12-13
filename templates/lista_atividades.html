@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block conteudo %}
+        {% for item in lista_de_atividades%}
+
+        <div class="p2"><br>
+            Nome: {{item.nome}}<br>
+            Id pessoa: {{item.pessoa_id}}
+        </div>
+        {% endfor%}
+
+{% endblock conteudo %}

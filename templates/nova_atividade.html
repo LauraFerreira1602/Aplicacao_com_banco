@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flash-error">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+     <form action="{{url_for('nova_atividade')}}" method="POST">
+        <label> Nome</label>
+        <input type="text" name="form_nome" >
+        <label> Id Pessoa</label>
+        <input type="number" name="form_id_pessoa">
+        <button>Adicionar</button>
+        <button><a href ="{{url_for('lista_atividades')}}">Cancelar</a></button>
+    </form>
+
+{% endblock conteudo %}

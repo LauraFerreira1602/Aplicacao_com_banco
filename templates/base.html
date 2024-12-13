@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <Link rel="stylesheet" href="/static/estrutura.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <p>Banco de Dados</p>
+    </header>
+
+    <nav>
+        <p>MENU</p>
+        <br>
+        <ul>
+            <li><a href="{{ url_for('nova_pessoa') }}">Cadastro</a></li>
+            <li><a href="{{ url_for('pessoas') }}">Lista de Pessoas</a></li>
+            <li><a href="{{ url_for('lista_atividades') }}">Lista de Atividades</a></li>
+            <li><a href="{{ url_for('nova_atividade') }}">Adicionar atividades</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!--
+    Início do corpo da página que sera utilizada como template
+    -->
+        {% block conteudo %}
+
+        {% endblock conteudo %}
+        <!--
+        Fim do corpo da página que sera utilizada como template
+        -->
+    </main>
+
+</div>
+
+
+</body>
+</html>

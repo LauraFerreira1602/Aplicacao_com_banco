@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+
+
+{% block conteudo %}
+        {% for item in lista_de_pessoas %}
+
+            <div class="p1">
+                <p>Nome: {{item.nome}}<br>
+                Sobrenome: {{item.sobrenome}}<br>
+                CPF: {{item.cpf}}</p>
+
+            </div>
+
+        {% endfor%}
+
+{% endblock conteudo %}
+
